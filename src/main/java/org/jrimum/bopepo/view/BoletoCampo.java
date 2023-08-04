@@ -105,5 +105,6 @@ public enum BoletoCampo {
 	txtRsQuantidade,
 	txtRsSacado,
 	txtRsValorCobrado,
-	txtRsValorDocumento
+	txtRsValorDocumento,
+	txtFcQrCode
 }

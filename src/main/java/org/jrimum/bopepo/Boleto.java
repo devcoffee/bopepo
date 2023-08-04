@@ -117,6 +117,8 @@ public class Boleto {
 	private String instrucao6;
 	private String instrucao7;
 	private String instrucao8;
+	
+	private Image qrCodePix;
 
 	/**
 	 * @see #setTextosExtras(Map)
@@ -565,6 +567,22 @@ public class Boleto {
 		getImagensExtras().put(campo, conteudo);
 	}
 
+	/**
+	 * Retorna QR Code PIX
+	 * @return qrCodePix
+	 */
+	public Image getQrCodePix() {
+		return qrCodePix;
+	}
+
+	/**
+	 * Adiciona QR Code PIX no boleto
+	 * @param qrCodePix
+	 */
+	public void setQrCodePix(Image qrCodePix) {
+		addImagensExtras(BoletoCampo.txtFcQrCode.name(), qrCodePix);
+		this.qrCodePix = qrCodePix;
+	}
 	@Override
 	public String toString() {
 		return Objects.toString(this);

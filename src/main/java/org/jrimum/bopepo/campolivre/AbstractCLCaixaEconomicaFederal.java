@@ -31,6 +31,7 @@ package org.jrimum.bopepo.campolivre;
 
 import static java.lang.String.format;
 
+import org.jrimum.domkee.financeiro.banco.febraban.NumeroDaConta;
 import org.jrimum.domkee.financeiro.banco.febraban.Titulo;
 
 /**
@@ -78,6 +79,13 @@ abstract class AbstractCLCaixaEconomicaFederal extends AbstractCampoLivre {
 		case NN14:
 			return new CLCaixaEconomicaFederalSICOBNossoNumero14().build(titulo);
 		case NN15:
+
+			NumeroDaConta conta = titulo.getContaBancaria().getNumeroDaConta();
+			String convenio = conta.getCodigoDaConta() + conta.getDigitoDaConta();
+
+			if (convenio.length() == 7)
+				return new CLCaixaEconomicaFederalSIGCBConvenio7(titulo);
+
 			return new CLCaixaEconomicaFederalSIGCB(titulo);
 		case NN17:
 			return new CLCaixaEconomicaFederalSINCO(titulo);

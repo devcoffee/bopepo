@@ -157,9 +157,9 @@ public class CLBancoobCobrancaNaoRegistrada extends AbstractCLBancoob{
 	private static final Integer DV_NOSSO_NUMERO_LENGTH = Integer.valueOf(1);
 
 	/**
-	 * Tamanho do campo Conta = 6.
+	 * Tamanho do campo Conta = 12.
 	 */
-	private static final Integer CONTA_LENGTH = Integer.valueOf(6);
+	private static final Integer CONTA_LENGTH = Integer.valueOf(12);
 
 	/**
 	 * Tamanho do campo Dígito da conta = 1
@@ -202,7 +202,7 @@ public class CLBancoobCobrancaNaoRegistrada extends AbstractCLBancoob{
 		checkTamanhoDigitoDoNossoNumero(titulo, DV_NOSSO_NUMERO_LENGTH);
 		checkNumeroDaContaNotNull(titulo);
 		checkCodigoDoNumeroDaConta(titulo);
-		checkCodigoDoNumeroDaContaMenorOuIgualQue(titulo, 9999999);
+		checkCodigoDoNumeroDaContaMenorOuIgualQue(titulo, 999999999999);
 		checkDigitoDoCodigoDoNumeroDaConta(titulo);
 	}
 

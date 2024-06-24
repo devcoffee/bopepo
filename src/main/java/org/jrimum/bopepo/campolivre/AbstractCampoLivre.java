@@ -579,7 +579,7 @@ abstract class AbstractCampoLivre extends BlockOfFields implements CampoLivre {
 	 *
 	 * @since 0.2
 	 */
-	protected final static void checkCodigoDoNumeroDaContaMenorOuIgualQue(Titulo titulo, long limite){
+	protected final static void checkCodigoDoNumeroDaContaMenorOuIgualQue(Titulo titulo, int limite){
 
 		boolean expression = titulo.getContaBancaria().getNumeroDaConta().getCodigoDaConta() <= limite;
 

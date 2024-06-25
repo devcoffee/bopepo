@@ -159,7 +159,7 @@ public class CLBancoobCobrancaNaoRegistrada extends AbstractCLBancoob{
 	/**
 	 * Tamanho do campo Conta = 07
 	 */
-	private static final Integer CONTA_LENGTH = Integer.valueOf(07);
+	private static final Integer CONTA_LENGTH = Integer.valueOf(7);
 
 	/**
 	 * Tamanho do campo Dígito da conta = 1

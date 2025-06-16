@@ -351,7 +351,16 @@ public enum BancosSuportados{
      *
      * @since 0.2
      */
-    ABCBRASIL("246", "28195667000106", "ABC Brasil", "ABC Brasil");
+    ABCBRASIL("246", "28195667000106", "ABC Brasil", "ABC Brasil"),	
+	/**
+     * Tipo enumerado que representa o <strong>Banco Money Plus</strong>, código de
+     * compensação <strong><tt>274</tt></strong> <a
+     * href="https://grafeno.digital">site</a>.
+     *
+     * @since 0.2
+     */
+    MONEYPLUS("274", "32087027000150", "Banco Money Plus", "Grafeno Digital Grafeno Pagamentos Ltda");
+    
 	/**
 
 	/**
@@ -391,6 +400,7 @@ public enum BancosSuportados{
 		suportados.put(BANCO_B2S.codigoDeCompensacaoBACEN, BANCO_B2S);
 		suportados.put(UNICRED.codigoDeCompensacaoBACEN, UNICRED);
 		suportados.put(ABCBRASIL.codigoDeCompensacaoBACEN, ABCBRASIL);
+		suportados.put(MONEYPLUS.codigoDeCompensacaoBACEN, MONEYPLUS);
 	}
 
 	/**

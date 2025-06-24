@@ -80,6 +80,7 @@ public class TestBancosSuportados{
 		assertEquals(BancosSuportados.UNIPRIMEPR.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "084");
 		assertEquals(BancosSuportados.UNIPRIMEMS.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "099");
 		assertEquals(BancosSuportados.BANCO_B2S.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "218");
+		assertEquals(BancosSuportados.MONEYPLUS.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(),"274");
 
 	}
 }

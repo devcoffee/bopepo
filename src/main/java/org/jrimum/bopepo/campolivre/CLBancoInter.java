@@ -29,10 +29,10 @@
 
 package org.jrimum.bopepo.campolivre;
 
+import org.jrimum.bopepo.parametro.ParametroBancoInter;
 import org.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import org.jrimum.texgit.type.component.Fillers;
 import org.jrimum.texgit.type.component.FixedField;
-import org.jrimum.utilix.Exceptions;
 
 
 /**
@@ -92,7 +92,7 @@ import org.jrimum.utilix.Exceptions;
  * 
  * @version 0.2
  */
-class CLBancoIntermedium extends AbstractCLBancoIntermedium { 
+class CLBancoInter extends AbstractCLBancoInter { 
 
 	/**
 	 * 
@@ -100,13 +100,30 @@ class CLBancoIntermedium extends AbstractCLBancoIntermedium {
 	private static final long serialVersionUID = 858563493013156459L;
 	
 	/**
-	 * 
+	 * Número de campos = 4.
 	 */
-	private static final Integer FIELDS_LENGTH = 6;
+	private static final Integer FIELDS_LENGTH = Integer.valueOf(4);
 	
-	private static final Integer CONSTANTE_70 = Integer.valueOf(70);
+	/**
+	 * Tamanho do campo Agência = 4. 001 a 004
+	 */
+	private static final Integer AGENCIA_LENGTH = Integer.valueOf(4);
 	
-	private static final Integer CONSTANTE_0 = Integer.valueOf(0);
+	/**
+	 * Tamanho do campo Carteira = 3. 005 a 007
+	 */
+	private static final Integer CARTEIRA_LENGTH = Integer.valueOf(3);
+	
+	/**
+	 * Tamanho do campo Conta = 7.  008 a 014
+	 */
+	private static final Integer NUMERO_OPERACAO_LENGHT = Integer.valueOf(7);
+	
+	/**
+	 * Tamanho do campo Nosso Número = 11. 015 a 025
+	 */
+	private static final Integer NOSSO_NUMERO_LENGTH = Integer.valueOf(11);
+	
 
 	/**
 	 * <p>
@@ -115,27 +132,33 @@ class CLBancoIntermedium extends AbstractCLBancoIntermedium {
 	 * 
 	 * @param titulo - título com as informações para geração do campo livre
 	 */
-	CLBancoIntermedium(Titulo titulo) {
+	CLBancoInter() {
 		
 		super(FIELDS_LENGTH);
 		
-		this.add(new FixedField<Integer>(titulo.getContaBancaria().getAgencia().getCodigo(), 4, Fillers.ZERO_LEFT));
-		this.add(new FixedField<Integer>(CONSTANTE_70, 2));
-		this.add(new FixedField<String>(titulo.getNossoNumero(), 11, Fillers.ZERO_LEFT));	
-		this.add(new FixedField<Integer>( titulo.getContaBancaria().getNumeroDaConta().getCodigoDaConta(), 6, Fillers.ZERO_LEFT));
-		this.add(new FixedField<String>( titulo.getContaBancaria().getNumeroDaConta().getDigitoDaConta(), 1, Fillers.ZERO_LEFT));
-		this.add(new FixedField<Integer>(CONSTANTE_0, 1));
 	}
 
 	@Override
 	protected void addFields(Titulo titulo) {
-		// TODO IMPLEMENTAR
-		Exceptions.throwUnsupportedOperationException("AINDA NÃO IMPLEMENTADO!");
+		this.add(new FixedField<Integer>(titulo.getContaBancaria().getAgencia().getCodigo(), AGENCIA_LENGTH, Fillers.ZERO_LEFT));
+		this.add(new FixedField<Integer>(titulo.getContaBancaria().getCarteira().getCodigo(), CARTEIRA_LENGTH, Fillers.ZERO_LEFT));
+		this.add(new FixedField<Integer>(titulo.getParametrosBancarios().<Integer>getValor(ParametroBancoInter.OPERACAO), NUMERO_OPERACAO_LENGHT, Fillers.ZERO_LEFT));
+		this.add(new FixedField<String>(titulo.getNossoNumero() + titulo.getDigitoDoNossoNumero(), NOSSO_NUMERO_LENGTH, Fillers.ZERO_LEFT));
+		
 	}
 
 	@Override
 	protected void checkValues(Titulo titulo) {
-		// TODO IMPLEMENTAR
-		Exceptions.throwUnsupportedOperationException("AINDA NÃO IMPLEMENTADO!");
+		checkAgenciaNotNull(titulo);
+		checkCodigoDaAgencia(titulo);
+		checkCodigoDaAgenciaMenorOuIgualQue(titulo, 9999);
+		checkCarteiraNotNull(titulo);
+		checkCodigoDaCarteira(titulo);
+		checkCodigoDaCarteiraMenorOuIgualQue(titulo, 999);
+		checkNossoNumero(titulo);
+		checkTamanhoDoNossoNumero(titulo, NN10);
+		checkNumeroDaContaNotNull(titulo);
+		checkCodigoDoNumeroDaConta(titulo);
+		checkCodigoDoNumeroDaContaMenorOuIgualQue(titulo, 9999999);
 	}
 }

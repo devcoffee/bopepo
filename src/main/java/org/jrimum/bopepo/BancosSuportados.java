@@ -171,13 +171,13 @@ public enum BancosSuportados{
 	BANCO_DE_BRASILIA("070","00000208000100","BRB- Banco de Brasília S.A.","Banco Múltiplo"),
 
 	/**
-	 * Tipo enumerado que representa o BANISA, Banco <strong>Intermedium</strong>,
-	 * código de compensação <strong><tt>077</tt></strong> <a href="http://www.bancointermedium.com.br/">
+	 * Tipo enumerado que representa o Banco <strong>Inter</strong>,
+	 * código de compensação <strong><tt>077</tt></strong> <a href="https://inter.co/">
 	 * site</a>.
 	 *
 	 * @since 0.2
 	 */
-	BANCO_INTEMEDIUM("077", "00416968000101", "BANCO INTERMEDIUM S.A.", "Banco Múltiplo"),
+	BANCO_INTER("077", "00416968000101", "Banco Inter S.a", "Banco Inter S.a"),
 
 	/**
 	 * Tipo enumerado que representa o CECRED, <strong>Cooperativa Central de Crédito Urbano</strong>,
@@ -388,7 +388,7 @@ public enum BancosSuportados{
 		suportados.put(BANCO_DO_ESTADO_DO_ESPIRITO_SANTO.codigoDeCompensacaoBACEN, BANCO_DO_ESTADO_DO_ESPIRITO_SANTO);
 		suportados.put(BANCO_RURAL.codigoDeCompensacaoBACEN, BANCO_RURAL);
 		suportados.put(BANCO_SANTANDER.codigoDeCompensacaoBACEN, BANCO_SANTANDER);
-		suportados.put(BANCO_INTEMEDIUM.codigoDeCompensacaoBACEN, BANCO_INTEMEDIUM);
+		suportados.put(BANCO_INTER.codigoDeCompensacaoBACEN, BANCO_INTER);
 		suportados.put(BANCO_SICREDI.codigoDeCompensacaoBACEN, BANCO_SICREDI);
 		suportados.put(BANCOOB.codigoDeCompensacaoBACEN, BANCOOB);
 		suportados.put(CITIBANK.codigoDeCompensacaoBACEN, CITIBANK);

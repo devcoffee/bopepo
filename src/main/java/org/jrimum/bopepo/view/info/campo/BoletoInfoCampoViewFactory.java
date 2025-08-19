@@ -78,10 +78,13 @@ public class BoletoInfoCampoViewFactory {
 			  case UNIPRIMEMS: return new BoletoInfoViewUniprime(resourceBundle, boleto);
 			  case BANCO_B2S: return new BoletoInfoViewBancoB2s(resourceBundle, boleto);
 			  case ABCBRASIL: return new BoletoInfoViewABCBrasil(resourceBundle, boleto);
+			  case BANCO_INTER: return new BoletoInfoViewBancoInter(resourceBundle, boleto);
+			default:
+				return new BoletoInfoViewDefault(resourceBundle, boleto);
 			 }
 		}
-
 		return new BoletoInfoViewDefault(resourceBundle, boleto);
+		
 	}
 
 }

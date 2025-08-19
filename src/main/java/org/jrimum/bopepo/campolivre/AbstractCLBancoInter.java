@@ -47,7 +47,7 @@ import org.jrimum.domkee.financeiro.banco.febraban.Titulo;
  * 
  * @version 0.2
  */
-abstract class AbstractCLBancoIntermedium extends AbstractCampoLivre {
+abstract class AbstractCLBancoInter extends AbstractCampoLivre {
 
 	/**
 	 * 
@@ -61,13 +61,13 @@ abstract class AbstractCLBancoIntermedium extends AbstractCampoLivre {
 	 * 
 	 * @param fieldsLength - Número de campos
 	 */
-	protected AbstractCLBancoIntermedium(Integer fieldsLength) {
+	protected AbstractCLBancoInter(Integer fieldsLength) {
 		
 		super(fieldsLength);
 	}
 
 	protected static CampoLivre create(Titulo titulo){
 		
-		return new CLBancoIntermedium(titulo);
+		return new CLBancoInter().build(titulo);
 	}
 }

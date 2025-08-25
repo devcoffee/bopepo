@@ -15,12 +15,12 @@ import org.junit.Before;
  * @author <a href="mailto:fernandobgi@gmail.com">Fernando Dias</a>
  *  
  */
-public class TestCLBancoIntermedium extends AbstractCampoLivreBaseTest<CLBancoIntermedium> {
+public class TestCLBancoInter extends AbstractCampoLivreBaseTest<CLBancoInter> {
 
 	@Before
 	public void setUp(){
 
-		titulo.getContaBancaria().setBanco(BancosSuportados.BANCO_INTEMEDIUM.create());
+		titulo.getContaBancaria().setBanco(BancosSuportados.BANCO_INTER.create());
 		titulo.getContaBancaria().setAgencia( new Agencia(54, "0"));
 		titulo.getContaBancaria().setNumeroDaConta(new NumeroDaConta(149666,"6"));
 		titulo.getContaBancaria().setCarteira(new Carteira(5));

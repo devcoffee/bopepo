@@ -70,7 +70,7 @@ public class TestBancosSuportados{
 		assertEquals(BancosSuportados.BANCO_DO_ESTADO_DO_ESPIRITO_SANTO.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "021");
 		assertEquals(BancosSuportados.BANCO_RURAL.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "453");
 		assertEquals(BancosSuportados.BANCO_SANTANDER.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "033");
-		assertEquals(BancosSuportados.BANCO_INTEMEDIUM.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "077");
+		assertEquals(BancosSuportados.BANCO_INTER.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "077");
 		assertEquals(BancosSuportados.BANCO_SICREDI.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "748");
 		assertEquals(BancosSuportados.BANCOOB.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "756");
 		assertEquals(BancosSuportados.CITIBANK.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(), "745");

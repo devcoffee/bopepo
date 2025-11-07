@@ -352,6 +352,7 @@ public enum BancosSuportados{
      * @since 0.2
      */
     ABCBRASIL("246", "28195667000106", "ABC Brasil", "ABC Brasil"),	
+    
 	/**
      * Tipo enumerado que representa o <strong>Banco Money Plus</strong>, código de
      * compensação <strong><tt>274</tt></strong> <a
@@ -359,7 +360,17 @@ public enum BancosSuportados{
      *
      * @since 0.2
      */
-    MONEYPLUS("274", "32087027000150", "Banco Money Plus", "Grafeno Digital Grafeno Pagamentos Ltda");
+    MONEYPLUS("274", "32087027000150", "Banco Money Plus", "Grafeno Digital Grafeno Pagamentos Ltda"),
+	
+	/**
+     * Tipo enumerado que representa o <strong>Banco Sofisa</strong>, código de
+     * compensação <strong><tt>637</tt></strong> <a
+     * href="https://www.sofisadireto.com.br">site</a>.
+     *
+     * @since 0.2
+     */
+    BANCO_SOFISA("637", "60889128000180", "BANCO SOFISA S.A", "BANCO SOFISA S.A");
+	
     
 	/**
 
@@ -401,6 +412,7 @@ public enum BancosSuportados{
 		suportados.put(UNICRED.codigoDeCompensacaoBACEN, UNICRED);
 		suportados.put(ABCBRASIL.codigoDeCompensacaoBACEN, ABCBRASIL);
 		suportados.put(MONEYPLUS.codigoDeCompensacaoBACEN, MONEYPLUS);
+		suportados.put(BANCO_SOFISA.codigoDeCompensacaoBACEN, BANCO_SOFISA);
 	}
 
 	/**

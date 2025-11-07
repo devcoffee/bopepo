@@ -9,17 +9,17 @@ public class CLBancoVotorantim extends AbstractCLBancoVotorantim {
 
 	private static final long serialVersionUID = -5787328473435278119L;
 
-	private static final Integer FIELDS_LENGTH = Integer.valueOf(4);
+	public static final Integer FIELDS_LENGTH = Integer.valueOf(4);
 
-	private static final Integer CONVENIO_LENGTH = Integer.valueOf(10);
+	public static final Integer CONVENIO_LENGTH = Integer.valueOf(10);
 	
-	private static final Integer FIXO_LENGTH = Integer.valueOf(3);
+	public static final Integer FIXO_LENGTH = Integer.valueOf(3);
 
-	private static final Integer NOSSO_NUMERO_COM_DV_LENGTH = Integer.valueOf(10);
+	public static final Integer NOSSO_NUMERO_COM_DV_LENGTH = Integer.valueOf(10);
 
-	private static final Integer CONSTANT_LENGTH = Integer.valueOf(2);
+	public static final Integer CONSTANT_LENGTH = Integer.valueOf(2);
 
-	private static final Integer CONSTANT_VALUE = Integer.valueOf(0);
+	public static final Integer CONSTANT_VALUE = Integer.valueOf(0);
 
 	private static final FixedField<Integer> CONSTANT_FIELD = new FixedField<Integer>(CONSTANT_VALUE, CONSTANT_LENGTH, Fillers.ZERO_LEFT);
 	

@@ -368,7 +368,7 @@ public enum BancosSuportados{
      *
      * @since 0.2
      */
-	BANCO_VOTORANTIM("655", "59588111004443", "BANCO VOTORANTIM S.A.", "BANCO VOTORANTIM S.A.");
+	BANCO_VOTORANTIM("655", "59588111004443", "BANCO VOTORANTIM S.A.", "BANCO VOTORANTIM S.A."),
 	
 	/**
      * Tipo enumerado que representa o <strong>Banco Sofisa</strong>, código de

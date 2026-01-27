@@ -233,14 +233,14 @@
 	<repositories>
 		<repository>
 			<id>jrimum.org</id>
-			<url>https://ci-jfrog.devcoffee.cloud/artifactory/jrimum.org/</url>
+			<url>https://ci-jfrog.intra.devco.cloud/artifactory/jrimum.org/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
 		<repository>
 			<id>public-jboss</id>
-			<url>https://ci-jfrog.devcoffee.cloud/artifactory/public-jboss/</url>
+			<url>https://ci-jfrog.intra.devco.cloud/artifactory/public-jboss/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
@@ -259,3 +259,4 @@
 	</distributionManagement>
 
 </project>
+

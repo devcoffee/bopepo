@@ -50,6 +50,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<url.file.srv>https://raw.githubusercontent.com/devcoffee/binary.file/master</url.file.srv>
 	</properties>
 
 	<build>
@@ -144,6 +145,65 @@
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.8.1</version>
 			</plugin>
+			<plugin>
+				<groupId>com.googlecode.maven-download-plugin</groupId>
+				<artifactId>download-maven-plugin</artifactId>
+				<version>1.6.8</version>
+				<executions>
+					<execution>
+						<id>download-domkee</id>
+						<phase>initialize</phase>
+						<goals><goal>wget</goal></goals>
+						<configuration>
+							<url>${url.file.srv}/custom.jars/jrimum-domkee-0.2.3-DEV-SNAPSHOT-dep.jar</url>
+							<outputDirectory>${project.build.directory}/custom-jars</outputDirectory>
+							<outputFileName>domkee.jar</outputFileName>
+						</configuration>
+					</execution>
+					<execution>
+						<id>download-vallia</id>
+						<phase>initialize</phase>
+						<goals><goal>wget</goal></goals>
+						<configuration>
+							<url>${url.file.srv}/custom.jars/jrimum-vallia-0.2.3-DEV-SNAPSHOT-dep.jar</url>
+							<outputDirectory>${project.build.directory}/custom-jars</outputDirectory>
+							<outputFileName>vallia.jar</outputFileName>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.2</version>
+				<executions>
+					<execution>
+						<id>install-domkee</id>
+						<phase>initialize</phase>
+						<goals><goal>install-file</goal></goals>
+						<configuration>
+							<file>${project.build.directory}/custom-jars/domkee.jar</file>
+							<groupId>org.jrimum</groupId>
+							<artifactId>jrimum-domkee</artifactId>
+							<version>0.2.3-DEV-SNAPSHOT</version>
+							<packaging>jar</packaging>
+						</configuration>
+					</execution>
+					<execution>
+						<id>install-vallia</id>
+						<phase>initialize</phase>
+						<goals><goal>install-file</goal></goals>
+						<configuration>
+							<file>${project.build.directory}/custom-jars/vallia.jar</file>
+							<groupId>org.jrimum</groupId>
+							<artifactId>jrimum-vallia</artifactId>
+							<version>0.2.3-DEV-SNAPSHOT</version>
+							<packaging>jar</packaging>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 
 	</build>
@@ -166,6 +226,11 @@
 			<groupId>org.jrimum</groupId>
 			<artifactId>jrimum-domkee</artifactId>
 			<version>0.2.3-DEV-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jrimum</groupId>

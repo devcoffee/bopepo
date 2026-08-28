@@ -371,6 +371,15 @@ public enum BancosSuportados{
 	BANCO_VOTORANTIM("655", "59588111004443", "BANCO VOTORANTIM S.A.", "BANCO VOTORANTIM S.A."),
 	
 	/**
+     * Tipo enumerado que representa o <strong>BANCO FIBRA S.A.</strong>, código de
+     * compensação <strong><tt>224</tt></strong> <a
+     * href="https://bancofibra.com.br/">site</a>.
+     *
+     * @since 0.2
+     */
+	BANCO_FIBRA("224", "58616418000108", "BANCO FIBRA S.A.", "BANCO FIBRA S.A."),
+	
+	/**
      * Tipo enumerado que representa o <strong>Banco Sofisa</strong>, código de
      * compensação <strong><tt>637</tt></strong> <a
      * href="https://www.sofisadireto.com.br">site</a>.
@@ -421,6 +430,7 @@ public enum BancosSuportados{
 		suportados.put(ABCBRASIL.codigoDeCompensacaoBACEN, ABCBRASIL);
 		suportados.put(MONEYPLUS.codigoDeCompensacaoBACEN, MONEYPLUS);
 		suportados.put(BANCO_VOTORANTIM.codigoDeCompensacaoBACEN, BANCO_VOTORANTIM);
+		suportados.put(BANCO_FIBRA.codigoDeCompensacaoBACEN, BANCO_FIBRA);
 		suportados.put(BANCO_SOFISA.codigoDeCompensacaoBACEN, BANCO_SOFISA);
 	}
 

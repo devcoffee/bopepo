@@ -12,7 +12,7 @@ import org.junit.Test;
  * Teste unitário do campo livre do Banco Vórtx.
  * </p>
  *
- * @author <a href="http://gilmatryx.googlepages.com/">Gilmar P.S.L</a>
+ * @author Bike
  */
 public class TestCLBancoVortx extends AbstractCampoLivreBaseTest<CLVortx> {
 

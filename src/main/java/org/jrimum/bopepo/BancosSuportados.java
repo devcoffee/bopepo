@@ -377,7 +377,16 @@ public enum BancosSuportados{
      *
      * @since 0.2
      */
-    BANCO_SOFISA("637", "60889128000180", "BANCO SOFISA S.A", "BANCO SOFISA S.A");
+    BANCO_SOFISA("637", "60889128000180", "BANCO SOFISA S.A", "BANCO SOFISA S.A"),
+	
+	/**
+     * Tipo enumerado que representa o <strong>Banco Vortx</strong>, código de
+     * compensação <strong><tt>310</tt></strong> <a
+     * href="https://grafeno.digital/">site</a>.
+     *
+     * @since 0.2
+     */
+    VORTX("310", "22610500000188", "VORTX DISTRIBUIDORA DE TITULOS E VALORES MOBILIARIOS LTDA.", "Vortx Distribuidora de Titulos e Valores Mobiliarios Ltda.");
 	
     
 	/**
@@ -422,6 +431,7 @@ public enum BancosSuportados{
 		suportados.put(MONEYPLUS.codigoDeCompensacaoBACEN, MONEYPLUS);
 		suportados.put(BANCO_VOTORANTIM.codigoDeCompensacaoBACEN, BANCO_VOTORANTIM);
 		suportados.put(BANCO_SOFISA.codigoDeCompensacaoBACEN, BANCO_SOFISA);
+		suportados.put(VORTX.codigoDeCompensacaoBACEN, VORTX);
 	}
 
 	/**

@@ -83,6 +83,7 @@ public class TestBancosSuportados{
 		assertEquals(BancosSuportados.MONEYPLUS.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(),"274");
 		assertEquals(BancosSuportados.BANCO_VOTORANTIM.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(),"655");
 		assertEquals(BancosSuportados.BANCO_SOFISA.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(),"637");
+		assertEquals(BancosSuportados.VORTX.create().getCodigoDeCompensacaoBACEN().getCodigoFormatado(),"310");
 
 	}
 }
